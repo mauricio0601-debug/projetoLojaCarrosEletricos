@@ -52,8 +52,16 @@ nav a{
     text-decoration: none;
     margin-left: 28px;
     font-size: 15px;
+    border-radius: 5px;
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
 }
-nav a:hover, nav a:focus{ color: #fff; text-decoration: underline; }
+nav a:hover{ 
+    color: #fff; text-decoration: underline;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(3, 3, 3, 0.804);
+    background-color: #040404;
+
+}
 
 main{ 
     flex: 1; padding: 24px 24px 48px; 
@@ -265,6 +273,7 @@ footer{
     padding: 18px;
     font-size: 14px;
     color: #333;
+    overflow: hidden;
 }
 
 footer div{
@@ -275,11 +284,33 @@ footer div{
 footer p{
     color: #fafafa;
     border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-footer p:hover{
+.tipoCont {
+    color: #fafafa;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.tipoCont:hover {
     color: red;
-    box-shadow: 0 0 15px rgba(227, 2, 2, 0.804);
+    text-shadow: 0 0 10px red;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#copy{
+    color: #fafafa;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    display: inline-block;
+}
+
+#copy:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 footer h3{
@@ -304,6 +335,18 @@ footer img{
     width: auto;
 }
 
+.redes-sociais a {
+    color: #fafafa;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.redes-sociais a:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+    transform: scale(1.05);
+}
+
 #contatos {
     display: flex;
     align-items: center;
@@ -312,7 +355,7 @@ footer img{
 }
 
 .limpar {
-    background: #ed5353;
+    background: #f64949;
     color: white;
     border: none;
     padding: 14px 30px;
@@ -322,7 +365,7 @@ footer img{
     cursor: pointer;
     margin-left: 10px;
     transition: 0.3s;
-    box-shadow: rgba(254, 52, 52, 0.623) 0 0 10px;
+    box-shadow: rgba(254, 52, 52, 5) 0 0 10px;
 }
 
 .limpar:hover {
