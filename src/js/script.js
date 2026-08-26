@@ -90,4 +90,22 @@
   }
 
   form.addEventListener('submit', calcular);
-})()
+
+  form.addEventListener('submit', calcular);
+
+  // 👇 COLE O CÓDIGO AQUI
+  document.getElementById('limpar').addEventListener('click', function () {
+    form.reset();
+
+    resultado.classList.remove('mostrar');
+    cardVencedor.classList.remove('mostrar');
+
+    document.getElementById('card-c1').classList.remove('vencedor');
+    document.getElementById('card-c2').classList.remove('vencedor');
+
+    document.querySelectorAll('.erro').forEach(function (erro) {
+      erro.textContent = '';
+    });
+  });
+
+})();
