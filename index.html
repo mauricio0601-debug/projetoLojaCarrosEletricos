@@ -30,12 +30,18 @@
         <h2>Carro 1</h2>
         <div class="field">
           <label for="c1-valor">Valor do carro (R$)</label>
-          <input type="text" inputmode="decimal" id="c1-valor" placeholder="Digite o valor do carro">
+          <div class="input-unidade">
+            <input type="text" inputmode="decimal" id="c1-valor" placeholder="Digite o valor do carro">
+            <span>R$</span>
+          </div>
           <div class="erro" id="erro-c1-valor"></div>
         </div>
         <div class="field">
           <label for="c1-km">Consumo (KM por litro)</label>
-          <input type="text" inputmode="decimal" id="c1-km" placeholder="Digite o KM por litro">
+          <div class="input-unidade">
+            <input type="text" inputmode="decimal" id="c1-km" placeholder="Digite o KM por litro">
+            <span>KM/L</span>
+          </div>
           <div class="erro" id="erro-c1-km"></div>
         </div>
       </div>
@@ -45,12 +51,18 @@
         <h2>Carro 2</h2>
         <div class="field">
           <label for="c2-valor">Valor do carro (R$)</label>
-          <input type="text" inputmode="decimal" id="c2-valor" placeholder="Digite o valor do carro">
+          <div class="input-unidade">
+            <input type="text" inputmode="decimal" id="c2-valor" placeholder="Digite o valor do carro">
+            <span>R$</span>
+          </div>
           <div class="erro" id="erro-c2-valor"></div>
         </div>
         <div class="field">
           <label for="c2-km">Consumo (KM por litro)</label>
-          <input type="text" inputmode="decimal" id="c2-km" placeholder="Digite o KM por litro">
+          <div class="input-unidade">
+            <input type="text" inputmode="decimal" id="c2-km" placeholder="Digite o KM por litro">
+            <span>KM/L</span>
+          </div>
           <div class="erro" id="erro-c2-km"></div>
         </div>
       </div>
@@ -59,12 +71,18 @@
         <h2>Simulador</h2>
         <div class="field">
           <label for="sim-dist">Distância percorrida (KM)</label>
-          <input type="text" inputmode="decimal" id="sim-dist" placeholder="Digite distância percorrida">
+          <div class="input-unidade">
+            <input type="text" inputmode="decimal" id="sim-dist" placeholder="Digite distância percorrida">
+            <span>KM</span>
+          </div>
           <div class="erro" id="erro-sim-dist"></div>
         </div>
         <div class="field">
           <label for="sim-preco">Preço do combustível (R$/litro)</label>
-          <input type="text" inputmode="decimal" id="sim-preco" placeholder="Digite o Preço da Energia">
+          <div class="input-unidade">
+            <input type="text" inputmode="decimal" id="sim-preco" placeholder="Digite o Preço da Energia">
+            <span>R$/L</span>
+          </div>
           <div class="erro" id="erro-sim-preco"></div>
         </div>
       </div>
@@ -82,6 +100,7 @@
     <div>
       <h2>Melhor opção</h2>
       <p class="nome-vencedor" id="nome-vencedor"></p>
+      <p class="categoria" id="categoria"></p>
       <p class="detalhe" id="detalhe-vencedor"></p>
     </div>
   </section>
@@ -118,7 +137,7 @@
         </div>
 
     </div>
-
+    <hr>
     <p class="copyright">© SuperCar 2026 - Todos os direitos reservados</p>
 </footer>
 

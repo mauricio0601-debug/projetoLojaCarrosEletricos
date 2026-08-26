@@ -55,6 +55,7 @@
 
     const nomeVencedor = document.getElementById('nome-vencedor');
     const detalheVencedor = document.getElementById('detalhe-vencedor');
+    const categoria = document.getElementById('categoria');
     const veredito = document.getElementById('veredito');
 
     const diferencaPreco = Math.abs(c1Valor - c2Valor);
@@ -74,6 +75,16 @@
       (c1Vence ? cardC1 : cardC2).classList.add('vencedor');
 
       nomeVencedor.textContent = nome;
+
+      const custoPorKm = preco / (c1Vence ? c1Km : c2Km);
+
+  if (custoPorKm <= 2) {
+      categoria.textContent = '🟢 Econômico';
+    } else if (custoPorKm <= 3) {
+      categoria.textContent = '🟡 Não Econômico';
+  } else {
+      categoria.textContent = '🔴 Não Compensa';
+  }
       detalheVencedor.textContent = `Economia total de ${formatarMoeda(economia)} em relação ao outro carro, para ${distancia.toLocaleString('pt-BR')} km rodados.`;
 
       let texto = `🏆 O <strong>${nome}</strong> é a melhor opção: considerando o valor de compra e o combustível para ${distancia.toLocaleString('pt-BR')} km, ele sai mais barato.`;

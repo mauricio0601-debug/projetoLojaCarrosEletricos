@@ -124,6 +124,7 @@ h1{
     margin-bottom: 12px; 
 }
 
+
 .field label{
     display: block;
     font-size: 12px;
@@ -273,6 +274,12 @@ footer div{
 
 footer p{
     color: #fafafa;
+    border-radius: 15px;
+}
+
+footer p:hover{
+    color: red;
+    box-shadow: 0 0 15px rgba(227, 2, 2, 0.804);
 }
 
 footer h3{
@@ -323,6 +330,37 @@ footer img{
     transform: scale(1.05);
     text-shadow: 0 0 5px #fff, 0 0 10px #fff;
     box-shadow: 0 0 15px rgba(142, 58, 58, 0.7);
+}
+
+.input-unidade {
+    display: flex;
+    align-items: center;
+}
+
+.input-unidade input {
+    border-radius: 6px 0 0 6px;
+}
+
+.input-unidade span {
+    padding: 10px 12px;
+    background: #fafafa;
+    border: 1px solid #999;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+}
+
+.categoria {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+.categoria {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 6px 0;
 }
 
 @media (max-width: 600px){
