@@ -60,22 +60,36 @@ h2{
     font-size: 25px;
 }
 
-article{
+
+article {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;       
+    gap: 30px;           
+    justify-content: center; 
 }
 
 .card {
+    flex: 1 1 280px;       
+    max-width: 500px;     
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    background-color: var(--color-card);
-    border-radius: 20px;
+    font-size: 20px;
+    background-color: var(--bg-colorCard);
     padding: 25px;
     text-align: center;
     color: rgb(7, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.173) 2px 2px 2px 2px;
+    border-radius: 25px;
 }
+
+.card input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 6px;
+}
+
 
 .card-content{
     margin-top: 15px;
@@ -95,3 +109,26 @@ footer {
     justify-content: center;
 }
 
+.btn-enviar{
+    margin-top: 30px;
+    text-align: center;
+
+}
+.botao{    
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 150px;
+    color:rgb(238, 233, 223) ;
+    border-radius: 10px;
+    color: color(srgb red green blue);
+    cursor: pointer;
+    background-color: rgb(8, 158, 2);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.botao:hover{
+    background: rgb(6, 145, 1);
+    transform: scale(1.1);
+}
