@@ -328,4 +328,9 @@ footer img{
 @media (max-width: 600px){
 header{ flex-wrap: wrap; gap: 10px; }
 nav a{ margin-left: 16px; }
+
+.footer-conteudo {
+    flex-direction: column;
+    gap: 20px;
+}
 }
