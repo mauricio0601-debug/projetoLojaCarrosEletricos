@@ -1,60 +1,103 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de carros</title>
-    <link rel="stylesheet" href="./src/css/estilo.css">
+     <link rel="stylesheet" href="src/css/estilo.css">
+    <title>SuperCar - Simulador de Custo</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-        <div class="logo"><img src="./src/assets/logodoSuperCar.png"></div>
-            <ul class="menu">
-                <li>home</li>
-                <li>busca</li>
-                <li>suporte</li>
-            </ul>
-        </nav>
 
-    </header>
-    <main>
-        <section>
-            <h2>Parâmetro de Entrada</h2>
-            <article>
-                <div class="card">Carro 1
-                    <div class="card-container">
-                        <p><input type="number" class="nome-car" placeholder="Digite o valor do carro" min="1"></p>
-                        <p><input type="number"  class="nome-car" placeholder="Digite o KM por litro" min="1" ></p>
-                    </div>
-                </div>
+<header>
+  <div class="logo-box">
+    <div class="logo-text">SUPER<span>CAR</span></div>
+    <div class="logo-sub">LOJA DE AUTOPEÇAS</div>
+  </div>
+  <nav>
+    <a href="#">home</a>
+    <a href="#">busca</a>
+    <a href="#">suporte</a>
+  </nav>
+</header>
 
-                <div class="card">Carro 2
-                    <div class="card-container">
-                        <p><input type="number" class="nome-car" placeholder="Digite o valor do carro" min="1"></p>
-                        <p><input type="number"  class="nome-car" placeholder="Digite o KM por litro" min="1" ></p>
-                    </div>
-                </div>
+<main>
+  <h1>Parâmetro de Entrada</h1>
 
-                <div class="card">Simulador
-                    <div class="card-container">
-                        <p><input type="number" class="nome-car" placeholder="Digite distância percorrida" min="1"></p>
-                        <p><input type="number"  class="nome-car" placeholder="Digite o Preço da Energia" min="0" ></p>
-                    </div>
-                </div>
-                <div class="card-result">
+  <form id="form-simulador" novalidate>
+    <div class="cards">
 
-                </div>
+      <div class="card" id="card-c1">
+        <div class="selo">🏆 Melhor opção</div>
+        <h2>Carro 1</h2>
+        <div class="field">
+          <label for="c1-valor">Valor do carro (R$)</label>
+          <input type="text" inputmode="decimal" id="c1-valor" placeholder="Digite o valor do carro">
+          <div class="erro" id="erro-c1-valor"></div>
+        </div>
+        <div class="field">
+          <label for="c1-km">Consumo (KM por litro)</label>
+          <input type="text" inputmode="decimal" id="c1-km" placeholder="Digite o KM por litro">
+          <div class="erro" id="erro-c1-km"></div>
+        </div>
+      </div>
 
-            </article>
-        </section>  
-        <div class="btn-enviar">
-            <p><button class="botao">Enviar</button></p>
-        </div>                               
-    </main>
-    <footer>
-        <div>&copy;SuperCar 2026 - Todos os direitos reservados</div>
-    </footer>
-    
+      <div class="card" id="card-c2">
+        <div class="selo">🏆 Melhor opção</div>
+        <h2>Carro 2</h2>
+        <div class="field">
+          <label for="c2-valor">Valor do carro (R$)</label>
+          <input type="text" inputmode="decimal" id="c2-valor" placeholder="Digite o valor do carro">
+          <div class="erro" id="erro-c2-valor"></div>
+        </div>
+        <div class="field">
+          <label for="c2-km">Consumo (KM por litro)</label>
+          <input type="text" inputmode="decimal" id="c2-km" placeholder="Digite o KM por litro">
+          <div class="erro" id="erro-c2-km"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Simulador</h2>
+        <div class="field">
+          <label for="sim-dist">Distância percorrida (KM)</label>
+          <input type="text" inputmode="decimal" id="sim-dist" placeholder="Digite distância percorrida">
+          <div class="erro" id="erro-sim-dist"></div>
+        </div>
+        <div class="field">
+          <label for="sim-preco">Preço do combustível (R$/litro)</label>
+          <input type="text" inputmode="decimal" id="sim-preco" placeholder="Digite o Preço da Energia">
+          <div class="erro" id="erro-sim-preco"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="enviar-wrap">
+      <button type="submit" class="enviar">Enviar</button>
+    </div>
+  </form>
+
+  <section class="card-vencedor" id="card-vencedor">
+    <div class="troféu">🏆</div>
+    <div>
+      <h2>Melhor opção</h2>
+      <p class="nome-vencedor" id="nome-vencedor"></p>
+      <p class="detalhe" id="detalhe-vencedor"></p>
+    </div>
+  </section>
+
+  <section class="resultado" id="resultado">
+    <h2>Resultado da Simulação</h2>
+    <div class="linha"><span>Custo de combustível — Carro 1</span><strong id="res-c1-combustivel"></strong></div>
+    <div class="linha"><span>Custo de combustível — Carro 2</span><strong id="res-c2-combustivel"></strong></div>
+    <div class="linha"><span>Custo total (compra + combustível) — Carro 1</span><strong id="res-c1-total"></strong></div>
+    <div class="linha"><span>Custo total (compra + combustível) — Carro 2</span><strong id="res-c2-total"></strong></div>
+    <div class="veredito" id="veredito"></div>
+  </section>
+</main>
+
+<footer>©SuperCar 2026 - Todos os direitos reservados</footer>
+
+<script src="./src/js/script.js"></script>
 </body>
 </html>
