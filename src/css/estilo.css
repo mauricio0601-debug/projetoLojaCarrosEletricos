@@ -19,12 +19,11 @@ root{
   padding: 15px 30px;   
 }
 
-/* Estilo do Logo */
-.logo {
-  color: rgb(8, 8, 8);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
+img{
+    height: 50px;
+    width: auto;
 }
+
 
 .menu {
   display: flex;             
