@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de carros</title>
+    <link rel="stylesheet" href="./src/css/estilo.css">
 </head>
 <body>
     <header>
-        <h1>SuperCar</h1>
-        <nav>
-            <ul>
-                <li class="nav-header">home</li>
-                <li class="nav-header">busca</li>
-                <li class="nav-header">suporte</li>
+        <nav class="navbar">
+        <div class="logo"><h1>SuperCar</h1></div>
+            <ul class="menu">
+                <li>home</li>
+                <li>busca</li>
+                <li>suporte</li>
+            </ul>
         </nav>
+
     </header>
     <main>
         <section>
+            <h2>Parâmetro de Entrada</h2>
             <article>
-                <h2>Parâmetro de Entrada</h2>
                 <div class="card">Carro 1
-                    <div class="card-content">
+                    <div class="card-container">
                         <p><input type="number" class="nome-car" placeholder="Digite o valor do carro" min="1"></p>
                         <p><input type="number"  class="nome-car" placeholder="Digite o KM por litro" min="1" ></p>
                     </div>
                 </div>
 
                 <div class="card">Carro 2
-                    <div class="card-content">
+                    <div class="card-container">
                         <p><input type="number" class="nome-car" placeholder="Digite o valor do carro" min="1"></p>
                         <p><input type="number"  class="nome-car" placeholder="Digite o KM por litro" min="1" ></p>
                     </div>
                 </div>
 
                 <div class="card">Simulador
-                    <div class="card-content">
+                    <div class="card-container">
                         <p><input type="number" class="nome-car" placeholder="Digite distância percorrida" min="1"></p>
                         <p><input type="number"  class="nome-car" placeholder="Digite o Preço da Energia" min="0" ></p>
                     </div>
