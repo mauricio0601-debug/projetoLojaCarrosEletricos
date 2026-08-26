@@ -3,8 +3,8 @@
     --vermelho-escuro: #6e0202;
     --verde: #2e9e3e;
     --verde-escuro: #257e32;
-    --cinza-fundo: #e6e2e2;
-    --cinza-rodape: #b7b3b3;
+    --cinza-fundo: #040404;
+    --cinza-rodape: #161515;
     --texto: #1a1a1a;
 }
 
@@ -28,13 +28,10 @@ header{
     padding: 12px 24px;
 }
 
-.logo-box{
-    background: #111;
-    border-radius: 6px;
-    padding: 8px 14px;
-}
 .logo-box img{
-    display:block; height: 40px; 
+    display: block;
+    height: 50px;
+    width: auto; 
 }
 .logo-text{
     color: #fff;
@@ -64,6 +61,7 @@ main{
 
 h1{ 
     font-size: 26px; margin: 0 0 20px; 
+    color:#fb0303;
 }
 
 .cards{
@@ -77,8 +75,8 @@ h1{
 .card{
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #ededed;
-    border: 1px solid #ccc;
+    background: #242222;
+    border: 1px solid #f90000;
     border-radius: 16px;
     padding: 20px 24px;
     flex: 1 1 280px;
@@ -92,10 +90,12 @@ h1{
 }
 
 .card h2{
+    color: #FFF;
     text-align: center;
     font-weight: normal;
     font-size: 20px;
     margin: 0 0 16px;
+    box-shadow: rgba(251, 252, 251, 0.532) 0 0 4px;
   }
 
 .card.vencedor{
@@ -127,7 +127,7 @@ h1{
 .field label{
     display: block;
     font-size: 12px;
-    color: #555;
+    color: #fafafa;
     margin-bottom: 4px;
 }
 
@@ -143,7 +143,7 @@ h1{
     outline-offset: 1px;
 }
 .field .erro{
-    color: var(--vermelho);
+    color: #ff8888;
     font-size: 12px;
     min-height: 14px;
     margin-top: 2px;
@@ -165,7 +165,7 @@ button.enviar{
     transition: 0.3s;
     box-shadow: rgba(64, 248, 110, 5) 0 0 10px;
 }
-button.enviar:hover, button.enviar:focus{ 
+button.enviar:hover{ 
     background: var(--verde-escuro);
     transform: scale(1.05);
     text-shadow: 0 0 5px #fff, 0 0 10px #fff;
@@ -175,7 +175,7 @@ button.enviar:hover, button.enviar:focus{
 .card-vencedor {
     max-width: 760px;
     margin: 32px auto 20px;
-    background: #fff;
+    background: #242222;
     border: 2px solid var(--verde);
     border-radius: 18px;
     padding: 28px;
@@ -198,7 +198,7 @@ button.enviar:hover, button.enviar:focus{
 .card-vencedor h2 {
     margin: 0 0 6px;
     font-size: 16px;
-    color: #555;
+    color: #fafafa;
     text-transform: uppercase;
 }
 
@@ -212,14 +212,14 @@ button.enviar:hover, button.enviar:focus{
 .card-vencedor .detalhe {
     margin: 8px 0 0;
     font-size: 15px;
-    color: #333;
+    color: #fafafa;
 }
 
 .resultado{
     max-width: 760px;
     margin: 32px auto 0;
-    background: #fff;
-    border: 1px solid #ccc;
+    background: #242222;
+    border: 1px solid #fb0202;
     border-radius: 16px;
     padding: 24px 28px;
     display: none;
@@ -228,20 +228,25 @@ button.enviar:hover, button.enviar:focus{
     display: block; 
 }
 
-.resultado h2{ margin-top: 0; font-size: 20px; }
+.resultado h2{ 
+    color:#fafafa;
+    margin-top: 0; font-size: 25px; 
+}
 
 .linha{
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #fafafa;
     font-size: 14px;
+    color: #fafafa;
 }
 .linha:last-of-type{ 
     border-bottom: none; 
 }
 .linha strong{ 
-    font-weight: bold; 
+    font-weight: bold;
+    color: #fafafa;
 }
 
 .veredito{
@@ -259,6 +264,44 @@ footer{
     padding: 18px;
     font-size: 14px;
     color: #333;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p{
+    color: #fafafa;
+}
+
+footer h3{
+    color: red;
+}
+
+p a{
+    color: #fafafa;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 15px;
+}
+
+p a:hover{
+    text-decoration: underline;
+}
+
+footer img{
+    display: block;
+    height: 50px;
+    width: auto;
+}
+
+#contatos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 .limpar {
